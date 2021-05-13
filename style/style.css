@@ -14,9 +14,9 @@ body {
 }
 
 main {
-  height: 90vh;
+  height: 100vh;
   width: 100%;
-  padding: 0 80px;
+  padding: 0vw 2vw;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -26,8 +26,6 @@ main {
 .sign-up {
   background-color: rgba(255, 255, 255, 0.33);
   width: 30vw;
-  border-color: white;
-  border-width: 2px;
   border-radius: 10px;
 }
 
@@ -62,12 +60,29 @@ form,
   align-items: center;
   justify-content: space-evenly;
   height: 350px;
+  border-color: white;
+  border-width: 20px;
 }
 input {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
   border-width: 0px;
+  text-align: center;
+  height: 23px;
+}
+input,
+select,
+textarea {
+  color: rgb(36, 44, 70);
+}
+
+textarea:focus,
+input:focus {
+  font-weight: bold;
+  outline: none;
+  border-style: solid;
+  transform: scale(1.05);
 }
 .input2 {
   position: relative;
@@ -76,11 +91,14 @@ input {
 }
 button {
   width: 50%;
+  height: 30px;
   background-color: rgba(255, 255, 255, 0.33);
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  border-width: 0px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border-width: 1px;
+  border-color: white;
+  border-style: solid;
 }
 
 .circle1,
@@ -90,8 +108,8 @@ button {
 }
 
 .circle1 {
-  width: 600px;
-  height: 600px;
+  width: 46vw;
+  height: 46vw;
   border-radius: 50%;
 
   background: linear-gradient(180deg, #97ff57 0%, #0d99ff 99.99%, #0094ff 100%);
@@ -101,16 +119,37 @@ button {
   top: -100px;
 }
 .circle2 {
-  width: 400px;
-  height: 400px;
+  width: 31vw;
+  height: 31vw;
   border-radius: 50%;
 
   filter: blur(10px);
   transform: rotate(18deg);
-  right: -50px;
-  bottom: -80px;
+  right: -4vw;
+  bottom: -14vh;
 
   background: linear-gradient(180deg, #ff57d0 0%, #0d99ff 99.99%, #0094ff 100%);
   filter: blur(5px);
   transform: rotate(18deg);
+}
+button:hover {
+  animation: flow 2s ease-in-out infinite;
+  transform: scale(1.3);
+  background: linear-gradient(-60deg, #217fbe, #904e95, #e73c7e, #ec46ad);
+  background-size: 300%;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes flow {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
